@@ -5,32 +5,32 @@ const commonTestConfig = require('./webpack.test.common.js');
 const isCoverage = process.env.NODE_ENV === 'coverage';
 
 const coverageRules = [].concat({
-    enforce: 'post',
-    test: /\.(js|ts)$/,
-    include: helpers.root('src'),
-    exclude: [
-      /\.(e2e|spec)\.ts$/,
-      /node_modules/
-    ],
-    loaders: ['istanbul-instrumenter-loader']
-  }, {
-    test: /\.ts$/,
-    include: helpers.root('src'),
-    exclude: [/\.e2e\.ts$/],
-    loaders: [{
-      loader: 'awesome-typescript-loader',
-      query: {
-        // use inline sourcemaps for "coverage" reporter
-        sourceMap: false,
-        inlineSourceMap: true,
-        compilerOptions: {
-          // Remove TypeScript helpers to be injected
-          // below by DefinePlugin
-          removeComments: true
-        }
+  enforce: 'post',
+  test: /\.(js|ts)$/,
+  include: helpers.root('src'),
+  exclude: [
+    /\.(e2e|spec)\.ts$/,
+    /node_modules/
+  ],
+  loaders: ['istanbul-instrumenter-loader']
+}, {
+  test: /\.ts$/,
+  include: helpers.root('src'),
+  exclude: [/\.e2e\.ts$/],
+  loaders: [{
+    loader: 'awesome-typescript-loader',
+    query: {
+      // use inline sourcemaps for "coverage" reporter
+      sourceMap: false,
+      inlineSourceMap: true,
+      compilerOptions: {
+        // Remove TypeScript helpers to be injected
+        // below by DefinePlugin
+        removeComments: true
       }
-    }, 'angular2-template-loader']
-  });
+    }
+  }, 'angular2-template-loader']
+});
 
 const nonCoverageRules = [{
   test: /\.ts$/,

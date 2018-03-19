@@ -3,23 +3,23 @@ var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 
 module.exports = webpackMerge(commonConfig, {
-    devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-eval-source-map',
 
-    entry: {
-        'polyfills': helpers.root('src', 'polyfills.ts'),
-        'vendor': helpers.root('src', 'vendor.ts'),
-        'app': helpers.root('src', 'main.ts')
-    },
+  entry: {
+    'polyfills': helpers.root('src', 'polyfills.ts'),
+    'vendor': helpers.root('src', 'vendor.ts'),
+    'app': helpers.root('src', 'main.ts')
+  },
 
-    output: {
-        path: helpers.root('dist'),
-        publicPath: '/',
-        filename: '[name].js',
-        chunkFilename: '[id].chunk.js'
-    },
+  output: {
+    path: helpers.root('dist'),
+    publicPath: '/',
+    filename: '[name].js',
+    chunkFilename: '[id].chunk.js'
+  },
 
-    devServer: {
-        historyApiFallback: true,
-        stats: 'minimal'
-    }
+  devServer: {
+    historyApiFallback: true,
+    stats: 'minimal'
+  }
 });
