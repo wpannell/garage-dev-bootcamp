@@ -7,9 +7,4 @@ import '@angular/http';
 import '@angular/router';
 // RxJS
 import 'rxjs/Observable';
-// Other vendors for example jQuery, Lodash or Bootstrap
-// You can import js, ts, css, sass, ...
-import 'ag-grid/dist/styles/ag-grid.css';
-import 'ag-grid/dist/styles/ag-theme-fresh.css';
 
-import 'ag-grid-angular/main';
