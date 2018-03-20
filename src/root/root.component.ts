@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'root',
   template: `
     <h1>hello world!</h1>
-    <button type="button" class="btn btn-primary" rel="hi-button">Hi</button>
+    <button mat-raised-button color="primary" rel="hi-button">Hi</button>
   `,
     styles: [`
       * {

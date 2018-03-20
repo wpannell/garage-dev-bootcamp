@@ -1,13 +1,19 @@
 import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule} from '../material/material.module';
 
 import {RootComponent} from './root.component';
-import {BrowserModule} from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
     RootComponent
   ],
-  imports: [BrowserModule],
+  imports: [
+    BrowserAnimationsModule,
+    BrowserModule,
+    MaterialModule
+  ],
   exports: [RootComponent],
   providers: [],
   bootstrap: [RootComponent]
