@@ -15,6 +15,7 @@ import { Component } from '@angular/core';
         width: 100vw;
       }
     `]
+
 })
 
 export class RootComponent {

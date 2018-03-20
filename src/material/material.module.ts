@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {MATERIAL_SANITY_CHECKS} from '@angular/material/core';
+import {MATERIAL_SANITY_CHECKS} from '@angular/material';
 
 import {
   MatButtonModule,
